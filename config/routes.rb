@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   get '/about', to: 'pages#about', as: 'about'
   get '/contests', to: 'pages#contest', as: 'contests'
   get '/kitten/:size/:size', to: 'pages#kitten'
+  get 'kittens/:size/:size', to: 'pages#kittens'
 
 end

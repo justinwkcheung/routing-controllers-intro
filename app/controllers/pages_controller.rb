@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def contest
     flash[:notice] = "Sorry, this contest has ended"
-    redirect_to welcome_url
+    redirect_to kitten_url(400)
   end
 
   def kitten
@@ -28,7 +28,7 @@ class PagesController < ApplicationController
       #doing nothing will point you to the right page
     else
       flash[:alert] =  "Sorry, you're not authorized to see this page!"
-      redirect_to welcome_url
+      redirect_to root_url
     end
   end
 end
